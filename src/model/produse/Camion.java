@@ -1,6 +1,6 @@
-package model;
+package model.produse;
 
-public class Camion extends  Masina{
+public class Camion extends Masina {
 
     private  double volumMarfa;
     private float lungime,latime,inaltime;
@@ -57,5 +57,15 @@ public class Camion extends  Masina{
 
     public float getInaltime() {
         return inaltime;
+    }
+
+    @Override
+    public String toString() {
+        return "Camion{" +
+                "volumMarfa=" + volumMarfa +
+                ", lungime=" + lungime +
+                ", latime=" + latime +
+                ", inaltime=" + inaltime +
+                '}';
     }
 }

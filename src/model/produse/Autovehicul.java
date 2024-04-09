@@ -1,11 +1,23 @@
-package model;
+package model.produse;
+
+import model.humanresources.Angajat;
+import model.humanresources.Cumparator;
+
+import java.util.Objects;
 
 abstract public class Autovehicul {
     private float pret;
     private  String codSerial;
     private  int nrLocuri;
     private  float kilometrii;
+    private String vanzatorul;
+    private String cumparator;
     public abstract String informatiiPoluare();
+
+
+
+
+
 
     public Autovehicul(float pret, String codSerial, int nrLocuri, float kilometrii) {
         this.pret = pret;
@@ -36,7 +48,21 @@ abstract public class Autovehicul {
     public String getCodSerial() {
         return codSerial;
     }
+    public Cumparator getCumparator() {
+        return cumparator;
+    }
 
+    public void setCumparator(Cumparator cumparator) {
+        this.cumparator = cumparator;
+    }
+
+    public void setVanzatorul(Angajat vanzatorul) {
+        this.vanzatorul = vanzatorul;
+    }
+
+    public Angajat getVanzatorul() {
+        return vanzatorul;
+    }
     public int getNrLocuri() {
         return nrLocuri;
     }
@@ -68,5 +94,17 @@ abstract public class Autovehicul {
 
     public void setKilometrii(float kilometrii) {
         this.kilometrii = kilometrii;
+    }
+
+    @Override
+    public int hashCode() {
+        return codSerial.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null ) return false;
+        if (obj instanceof  Autovehicul) return Objects.equals(codSerial,((Autovehicul) obj).codSerial);
+        return false;
     }
 }

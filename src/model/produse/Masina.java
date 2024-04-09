@@ -1,4 +1,6 @@
-package model;
+package model.produse;
+
+import model.produse.Autovehicul;
 
 public class Masina extends Autovehicul {
     private  int putereMotor;
@@ -68,6 +70,8 @@ public class Masina extends Autovehicul {
         return poluare;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Masina are codul serial "+getCodSerial()+" cu culoare "+ culoare+"are o putere de motor "+putereMotor+" si costa "+getPret();
+    }
 }
