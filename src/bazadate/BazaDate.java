@@ -5,86 +5,52 @@ import model.humanresources.Cumparator;
 import model.humanresources.Om;
 import model.produse.Autovehicul;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Objects;
 
 public class BazaDate {
-    static private HashSet<Om> oameni = new HashSet<>();
-    static  private HashSet<Autovehicul> inventar = new HashSet<>();
+    static  private  final HashMap<String,Om> oameni=new HashMap<>();
+    static  private  final HashMap<String,Autovehicul> inventar= new HashMap<>();
 
-    public  static void add(Om o){
-        oameni.add(o);
+    static void add(Om o){
+        if(oameni.containsKey(o.getNume())){
+            System.out.println("Exista deja acest om in DB");
+            return;
+        }
+        oameni.put(o.getNume(),o);
     }
-    public  static  void remove (Om o){
-        oameni.remove(o);
-    }
-    public  static  void add(Autovehicul a){
-        inventar.add(a);
-    }
-    public  static void remove(Autovehicul a){
-        inventar.remove(a);
-    }
+    static void add(Autovehicul a ){
+        if(inventar.containsKey(a.getCodSerial())){
+            System.out.println("autovehiculul  deja exista");
+            return;
+        }
+        inventar.put(a.getCodSerial(),a);
 
-    public  static String displayOm(String nume){
-        for(Om om:oameni){
-            if (Objects.equals(om.getNume(), nume)) return om.toString();
-        }
-        return  "";
     }
-    public  static  String displayVehicul(String cod){
-        for(Autovehicul v:inventar){
-            if(Objects.equals(v.getCodSerial(),cod)) return v.toString();
-        }
-        return  "";
+    static void removeOm(String nume){
+        oameni.remove(nume);
     }
-    public  static  void Update(String nume, Om o){
-        for(Om om:oameni){
-            if (Objects.equals(om.getNume(), nume)){
-                oameni.remove(om);
-                oameni.add(o);
-                return;
-            }
-        }
+    static void removeVehicul(String cod){
+        inventar.remove(cod);
     }
-    public  static  void Update(String cod,Autovehicul a){
-        for(Autovehicul x:inventar){
-            if(Objects.equals(x.getCodSerial(),a.getCodSerial())){
-                inventar.remove((x));
-                inventar.add(a);
-                return;
-            }
+    static  String displayOm(String nume){
+        if(inventar.get(nume)!=null){
+            return inventar.get(nume).toString();
         }
+        return "404 not found";
     }
-
-    public  static  StringBuilder displayInventar(){
-        StringBuilder b = new StringBuilder();
-        for(Autovehicul a:inventar){
-            b.append('\n');
-            b.append(a.toString());
+    static  String displayVehicul(String cod){
+        if(oameni.get(cod)!=null){
+            return oameni.get(cod).toString();
         }
-        return b;
+        return "404 not found";
     }
-
-    public  static  StringBuilder displayAngajati(){
-        StringBuilder b = new StringBuilder();
-        for (Om o:oameni){
-            if(o instanceof Angajat){
-                b.append(o.toString());
-                b.append('\n');
-            }
-        }
-        return b;
+    static  void updateOm(String nume, Om o){
+        oameni.put(nume,o);
     }
-
-    public  static  StringBuilder displayCumparatori(){
-        StringBuilder b = new StringBuilder();
-        for (Om o:oameni){
-            if(o instanceof Cumparator){
-                b.append(o.toString());
-                b.append('\n');
-            }
-        }
-        return b;
+    static  void updateVehicul(String cod, Autovehicul a){
+        inventar.put(cod,a);
     }
 
 

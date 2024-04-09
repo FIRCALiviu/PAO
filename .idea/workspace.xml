@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4498f64-aaf1-4105-a51e-29887b32bea4" name="Changes" comment="initialised some classes">
-      <change afterPath="$PROJECT_DIR$/.idea/Dealership.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bazadate/BazaDate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/errors/InvalidEmail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/humanresources/Angajat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/humanresources/Cumparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/humanresources/Om.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/produse/Motocicleta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/MainService.java" afterDir="false" />
+    <list default="true" id="e4498f64-aaf1-4105-a51e-29887b32bea4" name="Changes" comment="started database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Autovehicul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/produse/Autovehicul.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Camion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/produse/Camion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Masina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/produse/Masina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bazadate/BazaDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bazadate/BazaDate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712433812707</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="started database">
+      <option name="closed" value="true" />
+      <created>1712682788752</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712682788752</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +131,7 @@
     <MESSAGE value="&#10;first commit" />
     <MESSAGE value="second commit" />
     <MESSAGE value="initialised some classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialised some classes" />
+    <MESSAGE value="started database" />
+    <option name="LAST_COMMIT_MESSAGE" value="started database" />
   </component>
 </project>
