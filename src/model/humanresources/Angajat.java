@@ -15,6 +15,12 @@ non-sealed  public class Angajat extends Om{
         this.bonus = bonus;
     }
 
+    public Angajat(String nume, int experienta, float salariu) {
+        super(nume);
+        this.experienta = experienta;
+        this.salariu = salariu;
+    }
+
     public int getExperienta() {
         return experienta;
     }

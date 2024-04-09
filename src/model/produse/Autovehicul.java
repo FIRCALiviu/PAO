@@ -48,19 +48,19 @@ abstract public class Autovehicul {
     public String getCodSerial() {
         return codSerial;
     }
-    public Cumparator getCumparator() {
+    public String getCumparator() {
         return cumparator;
     }
 
-    public void setCumparator(Cumparator cumparator) {
+    public void setCumparator(String cumparator) {
         this.cumparator = cumparator;
     }
 
-    public void setVanzatorul(Angajat vanzatorul) {
+    public void setVanzatorul(String vanzatorul) {
         this.vanzatorul = vanzatorul;
     }
 
-    public Angajat getVanzatorul() {
+    public String getVanzatorul() {
         return vanzatorul;
     }
     public int getNrLocuri() {

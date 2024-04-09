@@ -13,14 +13,14 @@ public class BazaDate {
     static  private  final HashMap<String,Om> oameni=new HashMap<>();
     static  private  final HashMap<String,Autovehicul> inventar= new HashMap<>();
 
-    static void add(Om o){
+    public static void add(Om o){
         if(oameni.containsKey(o.getNume())){
             System.out.println("Exista deja acest om in DB");
             return;
         }
         oameni.put(o.getNume(),o);
     }
-    static void add(Autovehicul a ){
+    public static void add(Autovehicul a ){
         if(inventar.containsKey(a.getCodSerial())){
             System.out.println("autovehiculul  deja exista");
             return;
@@ -28,28 +28,28 @@ public class BazaDate {
         inventar.put(a.getCodSerial(),a);
 
     }
-    static void removeOm(String nume){
+    public static void removeOm(String nume){
         oameni.remove(nume);
     }
-    static void removeVehicul(String cod){
+    public  static void removeVehicul(String cod){
         inventar.remove(cod);
     }
-    static  String displayOm(String nume){
+    public  static  String displayOm(String nume){
         if(inventar.get(nume)!=null){
             return inventar.get(nume).toString();
         }
         return "404 not found";
     }
-    static  String displayVehicul(String cod){
+    public static  String displayVehicul(String cod){
         if(oameni.get(cod)!=null){
             return oameni.get(cod).toString();
         }
         return "404 not found";
     }
-    static  void updateOm(String nume, Om o){
+    public static  void updateOm(String nume, Om o){
         oameni.put(nume,o);
     }
-    static  void updateVehicul(String cod, Autovehicul a){
+    public static  void updateVehicul(String cod, Autovehicul a){
         inventar.put(cod,a);
     }
 
