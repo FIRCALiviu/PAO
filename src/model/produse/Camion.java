@@ -66,6 +66,11 @@ public class Camion extends Masina {
                 ", lungime=" + lungime +
                 ", latime=" + latime +
                 ", inaltime=" + inaltime +
-                '}';
+                "pret = " + getPret()+
+                "cod = "+ getCodSerial()+
+                " vanzator =" +getVanzatorul()+
+                " comparator = "+getCumparator();
+
+
     }
 }

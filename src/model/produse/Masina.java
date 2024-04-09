@@ -72,6 +72,6 @@ public class Masina extends Autovehicul {
 
     @Override
     public String toString() {
-        return "Masina are codul serial "+getCodSerial()+" cu culoare "+ culoare+"are o putere de motor "+putereMotor+" si costa "+getPret();
+        return "Masina are codul serial "+getCodSerial()+" cu culoare "+ culoare+"are o putere de motor "+putereMotor+" si costa "+getPret()+ " cu cumparatorul "+getCumparator()+ " si vanzatorul "+getVanzatorul();
     }
 }

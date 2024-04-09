@@ -39,8 +39,9 @@ public class Motocicleta extends Autovehicul{
     public String toString() {
         return "Motocicleta{" +
                 "hp=" + hp +
-                " "+getCodSerial()
-                +" "+getPret()+
-                '}';
+                "cod= "+getCodSerial()
+                +"pret= "+getPret()
+                +" cumparator = " +getCumparator()
+                +" vanzator = "+getVanzatorul();
     }
 }

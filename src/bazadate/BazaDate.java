@@ -5,8 +5,10 @@ import model.humanresources.Cumparator;
 import model.humanresources.Om;
 import model.produse.Autovehicul;
 
+import javax.management.ValueExp;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Objects;
 
 public class BazaDate {
@@ -28,6 +30,29 @@ public class BazaDate {
         inventar.put(a.getCodSerial(),a);
 
     }
+    public  static  void giveBonus(String angajat){
+        float sum = 0;
+        for(Map.Entry<String,Autovehicul> pair : inventar.entrySet()){
+            Autovehicul a= pair.getValue();
+            if(Objects.equals(a.getVanzatorul(),angajat)){
+                sum+=a.getPret()*0.05;
+            }
+        }
+        if (oameni.containsKey(angajat)) {
+            Om i = oameni.get(angajat);
+            if(i instanceof Angajat){
+                ((Angajat) i).setBonus(sum);
+            }
+
+        }
+    }
+
+    public static void setCumparator(String codProdus, String numeCumparator, String numeVanzator){
+        if(inventar.containsKey(codProdus)){
+            inventar.get(codProdus).setCumparator((numeCumparator));
+            inventar.get(codProdus).setVanzatorul(numeVanzator);
+        }
+    }
     public static void removeOm(String nume){
         oameni.remove(nume);
     }
@@ -35,14 +60,14 @@ public class BazaDate {
         inventar.remove(cod);
     }
     public  static  String displayOm(String nume){
-        if(inventar.get(nume)!=null){
-            return inventar.get(nume).toString();
+        if(oameni.get(nume)!=null){
+            return oameni.get(nume).toString();
         }
         return "404 not found";
     }
     public static  String displayVehicul(String cod){
-        if(oameni.get(cod)!=null){
-            return oameni.get(cod).toString();
+        if(inventar.get(cod)!=null){
+            return inventar.get(cod).toString();
         }
         return "404 not found";
     }
@@ -53,5 +78,22 @@ public class BazaDate {
         inventar.put(cod,a);
     }
 
+    public  static  StringBuilder displayallOm(){
+        StringBuilder b = new StringBuilder();
+        for(Map.Entry<String,Om> pair : oameni.entrySet()){
+            b.append('\n');
+            b.append(pair.getValue().toString());
+        }
+        return b;
+    }
+    public  static  StringBuilder displayallItem(){
+        StringBuilder b = new StringBuilder();
+        for(Map.Entry<String,Autovehicul> pair: inventar.entrySet()){
+            b.append('\n')
+                    ;
+            b.append(pair.getValue().toString());
+        }
+        return b;
+    }
 
 }

@@ -15,7 +15,8 @@ import java.util.Scanner;
 public class MainService {
     public static void process(InputStream i){
         Scanner s = new Scanner(i);
-        if(Objects.equals(s.next(), "produse")){
+        System.out.println("interogati produse sau human ressources?[p/h]");
+        if(Objects.equals(s.next(), "h")){
             HumanResourcesService.handle(i);
         }
         else{
@@ -100,8 +101,20 @@ class HumanResourcesService {
 
     }
 
+    static void bonus(InputStream  i){
+        System.out.println("introduceti numele angajatului care primeste bonus in funct de vanzarile lui");
+        Scanner s = new Scanner(i);
+
+        var nume = s.next();
+        BazaDate.giveBonus(nume);
+
+    }
+    static void displayall(InputStream i){
+        System.out.println(BazaDate.displayallOm());
+    }
     static  void handle(InputStream i){
         Scanner s = new Scanner(i);
+        System.out.println("create/delete/update/read/bonus/displayall");
         var q = s.next();
         if(Objects.equals(q,"create")){
             create(i);
@@ -114,6 +127,12 @@ class HumanResourcesService {
         }
         if(Objects.equals(q,"read")){
             read(i);
+        }
+        if(cmp(q,"bonus")){
+            bonus(i);
+        }
+        if(cmp(q,"displayall")){
+            displayall(i);
         }
     }
 }
@@ -149,7 +168,7 @@ class ProductsService{
     static  void read(InputStream i){
         Scanner s = new Scanner(i);
         System.out.println("introduceti codul serial apart. vehiculului de analizat");
-        BazaDate.displayVehicul(s.next());
+        System.out.println(BazaDate.displayVehicul(s.next()));
     }
 
     static  void update(InputStream i){
@@ -177,9 +196,20 @@ class ProductsService{
         }
 
     }
+
+    static  void  vinde(InputStream i){
+        Scanner s = new Scanner(i);
+        System.out.println("cod serial, nume cumparator, nume vanzator");
+        BazaDate.setCumparator(s.next(),s.next(),s.next());
+    }
+    static void displayall(InputStream  i){
+        System.out.println(BazaDate.displayallItem());
+    }
     static  void handle(InputStream i){
         Scanner s = new Scanner(i);
+        System.out.println("create/delete/update/read/vinde/displayall");
         var q = s.next();
+
         if(Objects.equals(q,"create")){
             create(i);
         }
@@ -191,6 +221,12 @@ class ProductsService{
         }
         if(Objects.equals(q,"read")){
             read(i);
+        }
+        if(cmp(q,"vinde")){
+            vinde(i);
+        }
+        if(cmp(q,"displayall")){
+            displayall(i);
         }
     }
 }

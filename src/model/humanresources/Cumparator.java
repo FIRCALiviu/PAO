@@ -7,7 +7,8 @@ import java.util.regex.*;
 final public class Cumparator extends  Om{
     private String email;
     private HashSet<Date> dateVizitare;
-    private static final String expresieRegulataEmail = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
+    private static final String expresieRegulataEmail = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
+            + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
     private  static  final Pattern emailChecker = Pattern.compile(expresieRegulataEmail);
 
     public Cumparator(String nume, String email) throws InvalidEmail {
