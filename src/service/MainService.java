@@ -9,9 +9,12 @@ import model.produse.Masina;
 import model.produse.Motocicleta;
 
 import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Objects;
 import java.util.Scanner;
-
+import java.util.Date;
 public class MainService {
     public static void process(InputStream i){
         Scanner s = new Scanner(i);
@@ -112,9 +115,42 @@ class HumanResourcesService {
     static void displayall(InputStream i){
         System.out.println(BazaDate.displayallOm());
     }
+    static  void giveDate(InputStream i){
+        Scanner s = new Scanner(i);
+        System.out.println(" introduceti data (yyyy-MM-dd) si numele cumparatorului");
+        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        String date = s.next();
+        String nume = s.next();
+        Date parsedDate = null;
+        try {
+            parsedDate = formatter.parse(date);
+        }
+        catch (ParseException p){
+            System.out.println("format de data incorrect !");
+        }
+        BazaDate.addDateBuyer(parsedDate,nume);
+
+
+    }
+    static  void removeDate(InputStream i){
+        Scanner s = new Scanner(i);
+        System.out.println(" introduceti data (yyyy-MM-dd) si numele cumparatorului");
+        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        String date = s.next();
+        String nume = s.next();
+        Date parsedDate = null;
+        try {
+            parsedDate = formatter.parse(date);
+        }
+        catch (ParseException p){
+            System.out.println("format de data incorrect !");
+        }
+        BazaDate.removeDateBuyer(parsedDate,nume);
+    }
+
     static  void handle(InputStream i){
         Scanner s = new Scanner(i);
-        System.out.println("create/delete/update/read/bonus/displayall");
+        System.out.println("create/delete/update/read/bonus/giveDate/removeDate/displayall");
         var q = s.next();
         if(Objects.equals(q,"create")){
             create(i);
@@ -133,6 +169,12 @@ class HumanResourcesService {
         }
         if(cmp(q,"displayall")){
             displayall(i);
+        }
+        if(cmp(q,"giveDate")){
+            giveDate(i);
+        }
+        if(cmp(q,"removeDate")){
+            removeDate(i);
         }
     }
 }

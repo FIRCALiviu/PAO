@@ -6,14 +6,14 @@ import java.util.regex.*;
 
 final public class Cumparator extends  Om{
     private String email;
-    private HashSet<Date> dateVizitare;
+    private Vector<Date> dateVizitare;
     private static final String expresieRegulataEmail = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
             + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
     private  static  final Pattern emailChecker = Pattern.compile(expresieRegulataEmail);
 
     public Cumparator(String nume, String email) throws InvalidEmail {
         super(nume);
-        this.dateVizitare = new HashSet<>();
+        this.dateVizitare = new Vector<>();
 
         Matcher m = emailChecker.matcher(email);
         if (m.matches()) {
@@ -25,6 +25,7 @@ final public class Cumparator extends  Om{
         }
     public  void addDate(Date d){
         dateVizitare.add((Date) d.clone());
+        Collections.sort(dateVizitare);
     }
     public  void removeDate(Date d){
         dateVizitare.remove(d);

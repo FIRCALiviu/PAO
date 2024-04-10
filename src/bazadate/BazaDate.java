@@ -6,10 +6,7 @@ import model.humanresources.Om;
 import model.produse.Autovehicul;
 
 import javax.management.ValueExp;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class BazaDate {
     static  private  final HashMap<String,Om> oameni=new HashMap<>();
@@ -94,6 +91,19 @@ public class BazaDate {
             b.append(pair.getValue().toString());
         }
         return b;
+    }
+    public  static void  addDateBuyer(Date d,String name){
+        Om x = oameni.get(name);
+        if(x!=null && x instanceof  Cumparator){
+            ((Cumparator) x).addDate(d);
+        }
+    }
+    public  static  void removeDateBuyer(Date d,String nume){
+        Om x = oameni.get(nume);
+        if(x!=null && x instanceof  Cumparator){
+            ((Cumparator) x).removeDate(d);
+        }
+
     }
 
 }
