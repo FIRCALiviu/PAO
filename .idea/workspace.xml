@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4498f64-aaf1-4105-a51e-29887b32bea4" name="Changes" comment="finished most">
+    <list default="true" id="e4498f64-aaf1-4105-a51e-29887b32bea4" name="Changes" comment="done part 1">
+      <change afterPath="$PROJECT_DIR$/src/service/HumanResourcesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/ProductsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bazadate/BazaDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bazadate/BazaDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/humanresources/Cumparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/humanresources/Cumparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/produse/Autovehicul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/automotive/Autovehicul.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/produse/Camion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/automotive/Camion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/produse/Masina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/automotive/Masina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/produse/Motocicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/automotive/Motocicleta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/MainService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712692266852</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="done part 1">
+      <option name="closed" value="true" />
+      <created>1712753897846</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712753897846</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,7 +174,8 @@
     <MESSAGE value="finished db" />
     <MESSAGE value="finished parser" />
     <MESSAGE value="finished most" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished most" />
+    <MESSAGE value="done part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="done part 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

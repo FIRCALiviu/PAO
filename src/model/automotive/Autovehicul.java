@@ -1,7 +1,4 @@
-package model.produse;
-
-import model.humanresources.Angajat;
-import model.humanresources.Cumparator;
+package model.automotive;
 
 import java.util.Objects;
 

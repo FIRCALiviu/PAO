@@ -1,6 +1,4 @@
-package model.produse;
-
-import model.produse.Autovehicul;
+package model.automotive;
 
 public class Masina extends Autovehicul {
     private  int putereMotor;
