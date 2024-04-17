@@ -1,9 +1,9 @@
 package service;
 
 import bazadate.BazaDate;
-import model.automotive.Camion;
-import model.automotive.Masina;
-import model.automotive.Motocicleta;
+import model.autovehicles.Camion;
+import model.autovehicles.Masina;
+import model.autovehicles.Motocicleta;
 
 import java.io.InputStream;
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package model.automotive;
+package model.autovehicles;
 
 public class Motocicleta extends Autovehicul{
     private int horsepower;

@@ -1,4 +1,4 @@
-package model.automotive;
+package model.autovehicles;
 
 public class Camion extends Masina {
 

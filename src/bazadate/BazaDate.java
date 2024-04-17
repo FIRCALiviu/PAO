@@ -3,7 +3,7 @@ package bazadate;
 import model.humanresources.Angajat;
 import model.humanresources.Cumparator;
 import model.humanresources.Om;
-import model.automotive.Autovehicul;
+import model.autovehicles.Autovehicul;
 
 import java.util.*;
 
