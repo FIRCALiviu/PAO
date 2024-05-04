@@ -38,7 +38,7 @@ public class Motocicleta extends Autovehicul{
     @Override
     public String toString() {
         return "Motocicleta{" +
-                "hp=" + horsepower +
+                "horsepower=" + horsepower +
                 "cod= "+getCodSerial()
                 +"pret= "+getPret()
                 +" cumparator = " +getCumparator()

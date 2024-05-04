@@ -5,18 +5,29 @@ import model.humanresources.Cumparator;
 import model.humanresources.Om;
 import model.autovehicles.Autovehicul;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.*;
 
 public class BazaDate {
-    static  private  final HashMap<String,Om> oameni=new HashMap<>();
-    static  private  final HashMap<String,Autovehicul> inventar= new HashMap<>();
+
 
     public static void add(Om o){
-        if(oameni.containsKey(o.getNume())){
-            System.out.println("Exista deja acest om in DB");
-            return;
+        String insertOm = String.format("insert into Om values(%s)", o.getNume());
+        String insertAngajat;
+        if(o instanceof Angajat){
+            insertAngajat = "insert into Angajat values(%s,%d,)"
         }
-        oameni.put(o.getNume(),o);
+        try(Statement stmt = DBConfiguration.getConnection().createStatement();
+
+        ){
+            stmt.executeUpdate(command);
+
+        }
+        catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
     }
     public static void add(Autovehicul a ){
         if(inventar.containsKey(a.getCodSerial())){
