@@ -16,13 +16,23 @@ public class BazaDate {
     public static void add(Om o){
         String insertOm = String.format("insert into Om values(%s)", o.getNume());
         String insertAngajat;
-        if(o instanceof Angajat){
-            insertAngajat = "insert into Angajat values(%s,%d,)"
-        }
+        String insertCumparator;
+
         try(Statement stmt = DBConfiguration.getConnection().createStatement();
 
         ){
-            stmt.executeUpdate(command);
+            if(o instanceof Angajat){
+                insertAngajat = String.format("insert into Angajat values(%s,%f,%d,%f)", o.getNume(),((Angajat) o).getSalariu(),((Angajat) o).getExperienta(),((Angajat) o).getBonus());
+
+                stmt.executeUpdate(insertOm);
+                stmt.executeUpdate(insertAngajat);
+            }
+            else if(o instanceof  Cumparator){
+                insertCumparator = String.format("insert into Cumparator values(%s,%s)", o.getNume(),((Cumparator) o).getEmail());
+                stmt.executeUpdate(insertOm);
+                stmt.executeUpdate(insertCumparator);
+            }
+
 
         }
         catch (SQLException e){
@@ -30,11 +40,8 @@ public class BazaDate {
         }
     }
     public static void add(Autovehicul a ){
-        if(inventar.containsKey(a.getCodSerial())){
-            System.out.println("autovehiculul  deja exista");
-            return;
-        }
-        inventar.put(a.getCodSerial(),a);
+        String insertAutovehicul = String.format("insert into Autovehicul values(%s,%f,%d,%f,%s,%s)", a.getCodSerial(),a.getPret(),a.getNrLocuri(),a.getKilometrii(),a.getVanzatorul(),a.getCumparator());
+        String insertMotocicleta;
 
     }
     public  static  void giveBonus(String angajat){

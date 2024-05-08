@@ -15,7 +15,6 @@ abstract public class Autovehicul {
 
 
 
-
     public Autovehicul(float pret, String codSerial, int nrLocuri, float kilometrii) {
         this.pret = pret;
         this.codSerial = codSerial;

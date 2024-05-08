@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4498f64-aaf1-4105-a51e-29887b32bea4" name="Changes" comment="refactor to change names">
-      <change afterPath="$PROJECT_DIR$/src/bazadate/DBConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bazadate/Deleteme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/mysql-connector-j-8.3.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Dealership.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Dealership.iml" afterDir="false" />
+    <list default="true" id="e4498f64-aaf1-4105-a51e-29887b32bea4" name="Changes" comment="started DB integration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bazadate/BazaDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bazadate/BazaDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/autovehicles/Motocicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/autovehicles/Motocicleta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/autovehicles/Autovehicul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/autovehicles/Autovehicul.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,21 +56,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DBtoy.executor": "Run",
-    "Application.Deleteme.executor": "Run",
-    "Application.Main.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/liviu/IdeaProjects/Dealership/src/libs",
-    "onboarding.tips.debug.path": "/home/liviu/IdeaProjects/Dealership/src/Main.java",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DBtoy.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Deleteme.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/liviu/IdeaProjects/Dealership/src/libs&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/liviu/IdeaProjects/Dealership/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/libs" />
@@ -218,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713379245212</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="started DB integration">
+      <option name="closed" value="true" />
+      <created>1714841397805</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714841397805</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,7 +246,8 @@
     <MESSAGE value="finished most" />
     <MESSAGE value="done part 1" />
     <MESSAGE value="refactor to change names" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor to change names" />
+    <MESSAGE value="started DB integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="started DB integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
