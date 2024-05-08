@@ -14,13 +14,13 @@ final public class Cumparator extends  Om{
     public Cumparator(String nume, String email) throws InvalidEmail {
         super(nume);
         this.dateVizitare = new Vector<>();
-
-        Matcher m = emailChecker.matcher(email);
-        if (m.matches()) {
-            this.email = email;
-        }
-        else{
-            throw new InvalidEmail();
+        if(email!=null) {
+            Matcher m = emailChecker.matcher(email);
+            if (m.matches()) {
+                this.email = email;
+            } else {
+                throw new InvalidEmail();
+            }
         }
         }
     public  void addDate(Date d){
@@ -37,6 +37,10 @@ final public class Cumparator extends  Om{
     public void setEmail(String email) {
         this.email = email;
     }
+
+
+
+
 
     @Override
     public String toString() {
