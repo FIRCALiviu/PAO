@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 class HumanResourcesService {
-    static boolean cmp(String s, String x) {
+    private static boolean cmp(String s, String x) {
         return Objects.equals(s, x);
 
     }

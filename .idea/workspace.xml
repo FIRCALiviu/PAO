@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4498f64-aaf1-4105-a51e-29887b32bea4" name="Changes" comment="endede database integration">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/libs__2_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/commons-lang3-3.14.0-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/commons-lang3-3.14.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/commons-lang3-3.14.0-test-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/commons-lang3-3.14.0-tests.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/commons-lang3-3.14.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Dealership.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Dealership.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/AuditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AuditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/HumanResourcesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/HumanResourcesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ProductsService.java" afterDir="false" />
-    </list>
+    <list default="true" id="e4498f64-aaf1-4105-a51e-29887b32bea4" name="Changes" comment="done csv audit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715194946807</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="done csv audit">
+      <option name="closed" value="true" />
+      <created>1715233940228</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715233940228</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -280,7 +275,8 @@
     <MESSAGE value="started DB integration" />
     <MESSAGE value="continued db integration" />
     <MESSAGE value="endede database integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="endede database integration" />
+    <MESSAGE value="done csv audit" />
+    <option name="LAST_COMMIT_MESSAGE" value="done csv audit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
