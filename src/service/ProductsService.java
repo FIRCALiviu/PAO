@@ -16,6 +16,7 @@ class ProductsService {
     }
 
     static void create(InputStream i) {
+        AuditService.write_action("PScreate");
         Scanner s = new Scanner(i);
         System.out.println("Masina, sau camion sau motocicleta ?[m/c/mo]");
         var q = s.next();
@@ -34,18 +35,21 @@ class ProductsService {
     }
 
     static void delete(InputStream i) {
+        AuditService.write_action("PSdelete");
         Scanner s = new Scanner(i);
         System.out.println("introduceti codul serial al vehicului de sters");
         BazaDate.removeVehicul(s.next());
     }
 
     static void read(InputStream i) {
+        AuditService.write_action("PSread");
         Scanner s = new Scanner(i);
         System.out.println("introduceti codul serial apart. vehiculului de analizat");
         System.out.println(BazaDate.displayVehicul(s.next()));
     }
 
     static void update(InputStream i) {
+        AuditService.write_action("PSupdate");
         Scanner s = new Scanner(i);
         System.out.println("Reintroduceti vehiculul");
         System.out.println("Masina, sau camion sau motocicleta ?[m/c/mo]");
@@ -72,12 +76,14 @@ class ProductsService {
     }
 
     static void vinde(InputStream i) {
+        AuditService.write_action("PSvinde");
         Scanner s = new Scanner(i);
         System.out.println("cod serial, nume cumparator, nume vanzator");
         BazaDate.setCumparator(s.next(), s.next(), s.next());
     }
 
     static void displayall(InputStream i) {
+        AuditService.write_action("PSdisplayall");
         System.out.println(BazaDate.displayallItem());
     }
 

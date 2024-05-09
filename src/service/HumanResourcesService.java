@@ -20,6 +20,7 @@ class HumanResourcesService {
     }
 
     static void create(InputStream i) {
+        AuditService.write_action("HRcreate");
         System.out.println("Angajat sau cumparator [a/c]");
         Scanner s = new Scanner(i);
         String c = s.next();
@@ -45,7 +46,7 @@ class HumanResourcesService {
     }
 
     static void delete(InputStream i) {
-
+        AuditService.write_action("HRdelete");
         System.out.println("introduceti numele");
         Scanner s = new Scanner(i);
 
@@ -53,12 +54,14 @@ class HumanResourcesService {
     }
 
     static void read(InputStream i) {
+        AuditService.write_action("HRread");
         Scanner s = new Scanner(i);
         System.out.println("introduceti numele");
         System.out.println(BazaDate.displayOm(s.next()));
     }
 
     static void update(InputStream i) {
+        AuditService.write_action("HRupdate");
         Scanner s = new Scanner(i);
         System.out.println("reintroduceti omul");
         System.out.println("Angajat sau cumparator [a/c]");
@@ -87,6 +90,7 @@ class HumanResourcesService {
     }
 
     static void bonus(InputStream i) {
+        AuditService.write_action("HRbonus");
         System.out.println("introduceti numele angajatului care primeste bonus in funct de vanzarile lui");
         Scanner s = new Scanner(i);
 
@@ -96,10 +100,12 @@ class HumanResourcesService {
     }
 
     static void displayall(InputStream i) {
+        AuditService.write_action("HRdisplayall");
         System.out.println(BazaDate.displayallOm());
     }
 
     static void giveDate(InputStream i) {
+        AuditService.write_action("HRgiveDate");
         Scanner s = new Scanner(i);
         System.out.println(" introduceti data (yyyy-MM-dd) si numele cumparatorului");
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
@@ -117,6 +123,7 @@ class HumanResourcesService {
     }
 
     static void removeDate(InputStream i) {
+        AuditService.write_action("HRremoveDate");
         Scanner s = new Scanner(i);
         System.out.println(" introduceti data (yyyy-MM-dd) si numele cumparatorului");
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
