@@ -3,16 +3,20 @@ package service;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 
-import java.io.*;
-import java.util.HashMap;
-import java.util.Objects;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
 
 public class AuditService {
     private AuditService(){}
     private static  String filename= "./audit.csv";
     public static void write_action(String action_Name) {
-        HashMap<String, Integer> actions = new HashMap<>();
-
+        ArrayList<String[]> actions = new ArrayList<>();
 
         try {
             File f = new File(filename);
@@ -24,19 +28,18 @@ public class AuditService {
             String[] line;
             // get file contents;
             while ((line = reader.readNext()) != null) {
-                actions.put(line[0], Integer.parseInt(line[1]));
+                actions.add(line);
             }
-            if (!actions.containsKey(action_Name)) {
-                actions.put(action_Name, 1);
-            } else {
-                actions.put(action_Name, actions.get(action_Name) + 1);
-            }
+
             reader.close();
             // write all contents back
             CSVWriter writer = new CSVWriter(new FileWriter(filename));
-            for (var pair : actions.entrySet()) {
-                writer.writeNext(new String[]{pair.getKey(), pair.getValue().toString()});
 
+            String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+            writer.writeNext(new String[]{action_Name, date});
+
+            for (String[] i : actions){
+                writer.writeNext(i);
             }
             writer.close();
 
